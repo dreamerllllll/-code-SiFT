@@ -1,0 +1,35 @@
+{
+    "bladder": [
+        "The bladder is a hollow, stretchable organ located in the lower abdomen"
+    ],
+    "femur-left": [
+        "The femur-left object is part of the human skeletal system and is situated on the left side of the body"
+    ],
+    "femur-right": [
+        "The femur-right object is long, weight-bearing, and the largest bone in the human body, located in the upper leg"
+    ],
+    "heart": [
+        "The heart object is a vital organ that pumps blood throughout the body, providing oxygen and nutrients to all other organs and tissues"
+    ],
+    "kidney-left": [
+        "The kidney-left object is the left half of a kidney-shaped organ"
+    ],
+    "kidney-right": [
+        "The kidney-right object is smaller than the kidney-left object and is located on the right side of the body"
+    ],
+    "liver": [
+        "The liver is a vital organ found in the upper right side of the abdomen"
+    ],
+    "lung-left": [
+        "The lung-left object appears to be asymmetrical, with one side noticeably larger than the other"
+    ],
+    "lung-right": [
+        "The lung-right object has a distinctive shape with a curved form resembling a human lung"
+    ],
+    "pancreas": [
+        "The pancreas is a dual-function gland. Located near the stomach, it plays a crucial role in regulating blood sugar levels and aiding in digestion"
+    ],
+    "spleen": [
+        "The spleen is a small, spongy organ located in the upper-left side of the abdomen"
+    ]
+}

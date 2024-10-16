@@ -1,0 +1,35 @@
+{
+    "bladder": [
+        "bladder"
+    ],
+    "femur-left": [
+        "femur-left"
+    ],
+    "femur-right": [
+        "femur-right"
+    ],
+    "heart": [
+        "heart"
+    ],
+    "kidney-left": [
+        "kidney-left"
+    ],
+    "kidney-right": [
+        "kidney-right"
+    ],
+    "liver": [
+        "liver"
+    ],
+    "lung-left": [
+        "lung-left"
+    ],
+    "lung-right": [
+        "lung-right"
+    ],
+    "pancreas": [
+        "pancreas"
+    ],
+    "spleen": [
+        "spleen"
+    ]
+}

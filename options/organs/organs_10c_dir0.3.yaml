@@ -1,0 +1,83 @@
+#全局设置
+global:
+  log_type: 'none'
+  gpu: '6'
+  log_dir: ./logs
+  second_dir: '3-3'
+  log_level: info
+  seed: [1991]
+  prefix: 'test4_dir0.3'
+  comment: ''
+
+  server: ark_server #support the ark
+  method: sift
+  model_name: resnet18_cbam
+  model_cfg:
+    stem_kernel: 3 #only useful when using resnet
+  remove_last_relu: false #remove the last relu => not very helpful when in cifar10
+  net_type: semantic  #semanticNet semantic
+  random_weight: false #use noise, but not the embedding
+  embedding_path: data/dataset_info/features/organmnist_short_info.json
+  scalar: false
+  projector: true
+  projector_type: random #or mlp/bottle/random
+  freeze_fc: true #fc.weight is tranable or not; false=>trainable
+  num_comm: 50
+  num_of_clients: 10
+  cfraction: 1.0
+  
+  local_ce: false #may be helpful at some scenario
+  use_focal_loss: false
+
+  ## ark
+  ark_global: true #for server, execute the ark process
+  ark_start_round: 0 #start from round 0
+  ark_start_pos: 1
+  ark_decay: 0.9
+  global_init: false ##init the net with global model
+
+  verbose_acc: true
+  vverbose_round_acc: true #output more detailed evaluation metrics
+  full_classifier: true
+
+data:
+  dataset: organsmnist
+  image_size: 224 #only useful when dataset is not mnist
+  allocate_type: label_dir_noniid
+  dir_alpha: 0.3
+  root_path: /data/xuyang/work/datasets/medmnist
+
+train:
+  #client_init_epoch: 20
+  client_init_lr: 0.1
+  client_init_milestones: [25]
+  client_init_weight_decay: 0.0005
+
+  #round_init_epoch: 20
+  round_init_lr: 0.1
+  round_init_milestones: [25]
+  round_init_weight_decay: 0.0002
+  round_init_momentum: 0.9
+
+  epoch: 10
+  batchsize: 128
+  num_workers: 4
+  eval_batchsize: 128
+  lr: 0.01
+  opt_type: sgd
+  momentum: 0.9
+  weight_decay: 0
+  scheduler: multi_step
+  lrate_decay: 0.1
+  milestones: [25]
+
+  val_freq: 1
+  local_val_freq: 10
+  save_freq: 10
+  temperature: 1
+  kd_ratio: 1 #配合only feature kd使用 用10
+  round_lr_decay: ~
+  apply_nme: false
+
+  round_milestones: ~
+  is_inctest: true
